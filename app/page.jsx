@@ -1,9 +1,17 @@
 import Image from 'next/image'
+import AddIcon from '@mui/icons-material/Add';
+import FilterAltIcon from '@mui/icons-material/FilterAlt';
+import { Link } from '@mui/material';
+import AddressBar from './components/AddressBar';
+import ButtonBar from './components/buttonbar';
+import Table from './components/Table';
 
-export default function Home() {
+export default function Dashboard() {
   return (
     <>
-    <h2>project started ... </h2>
+    <AddressBar/>
+    <ButtonBar/>
+    <Table/>
     </>
   )
 }
