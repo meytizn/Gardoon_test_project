@@ -7,6 +7,8 @@ import ButtonBar from './components/buttonbar';
 import Table from './components/Table';
 
 import GetApi from './api/GetApi';
+import PostApi from './api/PostApi';
+
 
 export default function Dashboard() {
   return (
@@ -17,7 +19,7 @@ export default function Dashboard() {
   
   <GetApi/>
   
-  
+  <PostApi/>
     </>
   )
 }
