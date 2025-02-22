@@ -1,14 +1,22 @@
-
-import React from 'react'
+"use client"
+import React, { useState } from 'react'
 import MoreVertIcon from '@mui/icons-material/MoreVert';
 
 
 
 export default function Table() {
+    const [showmore , setshowmore]=useState(true)
   return (
     <>
 
+{/* {showmore ? (<div className='w-[100px] text-center bg-slate-500'>Hello world </div>):null} */}
+
 <br/><br/>
+
+
+
+{/* table section */}
+
 
 <div className='w-[90%] m-auto' >  
 
@@ -49,7 +57,8 @@ export default function Table() {
 
 
 
-        <tbody>
+        <tbody className='relative'>
+
             <tr class="bg-white border-b dark:bg-gray-800 dark:border-gray-700 border-gray-200 hover:bg-gray-50 dark:hover:bg-gray-600">
                 <td class="w-4 p-4">
                     <div class="flex items-center">
@@ -78,12 +87,31 @@ export default function Table() {
                 <td class="px-6 py-4">
                     4600
                 </td>
-                <td class="flex items-center px-6 py-4">
-                  <MoreVertIcon/>
-                    {/* <a href="#" class="font-medium text-blue-600 dark:text-blue-500 hover:underline">Edit</a>
-                    <a href="#" class="font-medium text-red-600 dark:text-red-500 hover:underline ms-3">Remove</a> */}
+
+                <td class="flex items-center px-6 py-4 flex-col " >
+                 <button onClick={()=>setshowmore(!showmore)}><MoreVertIcon/></button> 
                 </td>
+
+
+
             </tr>
+
+
+            {/* more section */}
+
+            {showmore ? (
+                <div class="px-6 py-4 absolute left-[80px] top-0 w-[250px] md:w-[130px]  md:my-[-50px] bg-white  ">
+                    <div className='flex flex-row md:flex-col gap-3  justify-around text-center'>
+                    <div><button>ویرایش</button></div>
+                   <div> <button>غیرفعال </button></div>
+                    <div><button>حذف</button></div>
+                    </div>
+                </div>
+                ):null}
+
+
+            {/* more section */}
+
         </tbody>
 
 
@@ -91,6 +119,10 @@ export default function Table() {
 </div>
 
 </div>  
+
+
+
+{/* end table section */}
     </>
   )
 }
