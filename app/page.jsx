@@ -5,6 +5,7 @@ import { Link } from '@mui/material';
 import AddressBar from './components/AddressBar';
 import ButtonBar from './components/buttonbar';
 import Table from './components/Table';
+import GetApi from './components/api/GetApi';
 
 export default function Dashboard() {
   return (
@@ -12,6 +13,8 @@ export default function Dashboard() {
     <AddressBar/>
     <ButtonBar/>
     <Table/>
+   
+   <GetApi/>
     </>
   )
 }
