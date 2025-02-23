@@ -24,26 +24,26 @@ export default function PostApi() {
 
   return (
     <>
-      <form className='form' onSubmit={handleSubmit}>
+      <form  className='form flex flex-col md:flex-row justify-start text-center gap-5 my-4' onSubmit={handleSubmit}>
         <input
           type="text"
-          className='form-input'
+          className='form-input w-[100%] h-[50px] md:w-[30%] md:text-center text-right px-3 md:px-0'
           id="name"
           value={title}
           onChange={(e) => setTitle(e.target.value)}
-          placeholder="title"
+          placeholder="عنوان درخواست..."
         />
         <br />
         <input
           type="text"
-          className='form-input'
+          className='form-input w-[100%] h-[50px] md:w-[30%] md:text-center text-right px-3 md:px-0'
           id="email"
           value={body}
           onChange={(e) => setBody(e.target.value)}
-          placeholder="body"
+          placeholder="موضوع در خواست ..."
         />
         <br />
-        <button type='submit'>Submit</button>
+        <button className=' text-[#00ACC1] w-[100%] h-[50px] md:w-[30%] text-center' type='submit'>ارسال در خواست</button>
       </form>
     </>
   );
