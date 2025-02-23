@@ -57,7 +57,7 @@ export default function PostList() {
   };
 
   if (loading) {
-    return <div>Loading...</div>;
+    return <div className='w-[90%] text-center py-10'>بارگذاری اطلاعات...</div>;
   }
 
   if (error) {
@@ -65,22 +65,22 @@ export default function PostList() {
   }
 
   return (
-    <div>
-      <h1>Posts</h1>
+    <div className='w-[90%] m-auto text-left'>
+      <h1 className='bg-blue-200 text-center'>fake api in used </h1>
       
-      <ul>
+      
       
         {posts.map((post) => (
          
       <Link href={`/${post.id}`}>
-      <li key={post.id}>
-            {post.id} - {post.title}
-          </li></Link>
+      <div key={post.id} className='flex flex-row justify-center items-center text-center'>
+       {post.title} 
+          </div></Link>
 
           
 
         ))}
-      </ul>
+      
       {renderPagination()}
     </div>
   );

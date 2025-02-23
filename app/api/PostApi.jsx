@@ -24,7 +24,7 @@ export default function PostApi() {
 
   return (
     <>
-      <form  className='form flex flex-col md:flex-row justify-start text-center gap-5 my-4' onSubmit={handleSubmit}>
+      <form  className='form flex flex-col md:flex-row justify-start text-center gap-5 my-4 ' onSubmit={handleSubmit}>
         <input
           type="text"
           className='form-input w-[100%] h-[50px] md:w-[30%] md:text-center text-right px-3 md:px-0'
