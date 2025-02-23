@@ -61,7 +61,7 @@ export default function ButtonBar() {
 
 
     {showcreate ? (
-    <div className="flex flex-col justify-center gap-8 w-[90%] m-auto">
+    <div className="flex flex-col justify-center gap-8 w-[90%] m-auto ">
   
     <PostApi/>
   

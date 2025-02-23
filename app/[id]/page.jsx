@@ -26,13 +26,27 @@ export default function Detailview({ params }) {
   }
 
   if (!post) {
-    return <div className='w-[100%] text-center'>...Loading Data</div>; // Or a loading spinner
+    return <div className='w-[100%] text-center py-10'> درحال بارگذاری اطلاعات کاربر ... </div>; // Or a loading spinner
   }
 
-  return (
-    <div>
-       {post.title}
-      <p>{post.body}</p>
+  return ( 
+    <>
+    <div className='w-[90%] text-center my-5 m-auto'>
+       خانه / سیستم / کاربر /{post.title}
+     
     </div>
+
+<br/>
+<br/>
+    <div className='w-[90%] text-center my-5 m-auto'>
+      اطلاعات کاربر :
+     
+    </div>
+
+    <div className='w-[90%] text-center my-5 m-auto'>
+      {post.body}
+     
+    </div>
+    </>
   );
 }
