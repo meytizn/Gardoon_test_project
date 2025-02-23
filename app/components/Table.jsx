@@ -10,7 +10,6 @@ export default function Table() {
   return (
     <>
 
-{/* {showmore ? (<div className='w-[100px] text-center bg-slate-500'>Hello world </div>):null} */}
 
 <br/><br/>
 
