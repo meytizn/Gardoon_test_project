@@ -2,6 +2,7 @@
 import React, { useEffect, useState } from 'react';
 import axios from 'axios';
 import Link from 'next/link'
+import TableData from '../components/TableData';
 
 
 export default function PostList() {
@@ -70,10 +71,14 @@ export default function PostList() {
       <ul>
       
         {posts.map((post) => (
+         
       <Link href={`/${post.id}`}>
       <li key={post.id}>
             {post.id} - {post.title}
           </li></Link>
+
+          
+
         ))}
       </ul>
       {renderPagination()}
